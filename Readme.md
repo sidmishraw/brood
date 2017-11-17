@@ -1,5 +1,7 @@
 # brood
 
+![](https://travis-ci.org/sidmishraw/brood.svg?branch=master)
+
 **brood** is a small Node.js based CLI application. **brood** allows you to search for algorithms and their implementations from the OpenGenus/cosmos repository. 
 
 > Note: Since **brood** is a CLI application, I've limited the search results to just 10.
