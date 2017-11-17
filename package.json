@@ -1,0 +1,29 @@
+{
+  "name": "brood-crawler",
+  "version": "1.0.0",
+  "description":
+    "A CLI that lets you search files in GitHub's cosmos repository and open them in the browser.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "clean": "rm -r ./bin",
+    "rebuild": "npm run clean && npm run build",
+    "bundle": "npm run rebuild && chmod +x ./bin/brood.js;"
+  },
+  "keywords": ["brood-crawler"],
+  "author": "sidmishraw",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.6.0",
+    "colors": "^1.1.2",
+    "commander": "^2.11.0",
+    "lodash": "^4.17.4",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "webpack": "^3.8.1"
+  }
+}
