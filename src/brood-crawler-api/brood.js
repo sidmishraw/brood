@@ -24,7 +24,7 @@ import { cyan, bgBlack, underline } from "colors";
  * search
  * ~~~~~~~~~
  * Searches the entered string in GitHub's OpenGenus/cosmos repository
- * 
+ *
  * @param {string} searchString The search string entered by the consumer. This will be searched in GitHub's
  * OpenGenus/cosmos repository.
  */
@@ -47,7 +47,7 @@ export const search = searchString => {
  * fetchResultsFromGitHub
  * ~~~~~~~~~~~~~~~~~~~~~~~~~
  * Fetches the results of the search from GitHub by using GitHub's code search API
- * 
+ *
  * @param {string} searchString The seach string entered by user/consumer
  * @param {(error:string, results:string) => void} callback The callback function that needs to be executed after this function has finished executing
  */
@@ -83,7 +83,7 @@ const fetchResultsFromGitHub = (searchString, callback) => {
  * processResultsFromGitHub
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * Processes the result string obtained by trimming away unwanted fields.
- * 
+ *
  * @param {string} resultString The results obtained from GitHub's search API
  * @param {(error:string, pResults: ProcessedResults) => void} callback The callback function
  */
@@ -121,7 +121,7 @@ const processResultsFromGitHub = (resultString, callback) => {
 //# type definitons for documentation purposes only
 /**
  * @typedef {[ProcessedResult]} ProcessedResults
- * 
+ *
  * @typedef {{name:string, url:string, path:string}} ProcessedResult
  */
 //# type definitons for documentation purposes only
@@ -132,7 +132,7 @@ const processResultsFromGitHub = (resultString, callback) => {
  * displayResultsToUser
  * ~~~~~~~~~~~~~~~~~~~~~~~~
  * Displays the processed results to the user so that they can lookup the results
- * 
+ *
  * @param {ProcessedResults} pResults The processed results obtained from `processResultsFromGitHub`
  * @param {any} callback The callback that is ignored since displayResultsToUser is a terminal operation in the pipeline.
  */
@@ -160,15 +160,15 @@ const displayResultsToUser = (pResults, callback) => {
  * formatOutputString
  * ~~~~~~~~~~~~~~~~~~~~
  * Generates the formatted output string to be displayed for the processed result.
- * 
+ *
  * @param {ProcessedResult} pResult The processed result
  * @param {number} index The position of the search result
- * 
+ *
  * @returns {string} The processed and formatted result string
  */
 const formatOutputString = (pResult, index) => {
   return `
-  
+
   ${index + 1}. "${pResult.name}" is located at "${pResult.path}".
   URL: ${cyan(underline(bgBlack(pResult.url)))}
 
